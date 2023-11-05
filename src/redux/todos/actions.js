@@ -1,48 +1,51 @@
-import { ADDED, ALLCOMPLETED, CLEARCOMPLETED, COLORSELECTED, DELETED, TOGGLED } from "./actionTypes"
+import {
+    ADDED,
+    ALLCOMPLETED,
+    CLEARCOMPLETED,
+    COLORSELECTED,
+    DELETED,
+    TOGGLED,
+} from "./actionTypes";
 
-export const added = (todoText)=>{
-    return{
+export const added = (todoText) => {
+    return {
         type: ADDED,
-        payload: todoText
-    }
-}
+        payload: todoText,
+    };
+};
 
-export const toggled = (todoId)=>{
-    return{
+export const toggled = (todoId) => {
+    return {
         type: TOGGLED,
-        payload: todoId
-    }
-}
+        payload: todoId,
+    };
+};
 
-export const colorSelected = (todoId, color)=>{
-    return{
+export const colorSelected = (todoId, color) => {
+    return {
         type: COLORSELECTED,
         payload: {
             todoId,
-            color
-        }
-    }
-}
+            color,
+        },
+    };
+};
 
-
-export const deleted = (todoId)=>{
-    return{
+export const deleted = (todoId) => {
+    return {
         type: DELETED,
-        payload:todoId,
-           
-    }
-}
+        payload: todoId,
+    };
+};
 
-export const allCompleted = ()=>{
-    return{
-        type: ALLCOMPLETED
-           
-    }
-}
+export const allCompleted = () => {
+    return {
+        type: ALLCOMPLETED,
+    };
+};
 
-export const clearCompleted = ()=>{
-    return{
-        type: CLEARCOMPLETED
-           
-    }
-}
+export const clearCompleted = () => {
+    return {
+        type: CLEARCOMPLETED,
+    };
+};
